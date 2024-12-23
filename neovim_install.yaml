@@ -1,0 +1,19 @@
+---
+- name: "Neovim installation"
+  hosts: localhost
+  connection: local 
+  gather_facts: false
+  become: true
+  tasks:
+  - name: "Install Neovim and utils with pacman"
+    community.general.pacman:
+      state: "present"
+      name:
+        - pyright  # lsp
+        - lua-language-server  # lsp
+        - bash-language-server  # lsp
+        - taplo-cli  # lsp toml
+        - ripgrep  # telescope dependency
+        - fd  # telescope dependency
+        - stylua  # lua formatter
+        - neovim
