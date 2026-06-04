@@ -16,4 +16,5 @@
         - ripgrep  # telescope dependency
         - fd  # telescope dependency
         - stylua  # lua formatter
+        - tree-sitter-cli  # treesitter dependency
         - neovim
