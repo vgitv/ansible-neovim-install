@@ -9,6 +9,10 @@
     community.general.pacman:
       state: "present"
       name:
+        - luarocks  # lazy.nvim requirement
+        - lua51  # lazy.nvim optional requirement => see `:checkhealth lazy` to get the version
+        - lua
+        - make  # needed by some plugins like telescope
         - pyright  # lsp
         - lua-language-server  # lsp
         - bash-language-server  # lsp
