@@ -9,6 +9,7 @@
     community.general.pacman:
       state: "present"
       name:
+        - xsel  # see :help clipboard
         - luarocks  # lazy.nvim requirement
         - lua51  # lazy.nvim optional requirement => see `:checkhealth lazy` to get the version
         - lua
